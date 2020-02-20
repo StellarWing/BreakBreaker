@@ -1,3 +1,5 @@
+ArrayList<Brick> myBricks;
+
 final int INTRO = 1;
 final int GAME  = 2;
 final int GAMEOVER = 3;
@@ -13,10 +15,30 @@ float px, py;
 boolean leftKey, rightKey;
 
 
+int gridx;
+int gridy;
 
 
 
 void setup() {
+  myBricks = new ArrayList<Brick>();
+  
+  
+  
+  gridx = 0;
+  gridy = 0;
+  int i = 0;
+  while(i < 50) {
+   myBricks.add(new Brick() ); //calling constructor
+   gridx = gridx + 40;
+   if (gridx >= 800) {
+     gridx = 0;
+     gridy = gridy + 20;
+     
+   }
+    i++;
+  }
+  
   size(800, 600);
  
   //ball
@@ -36,6 +58,7 @@ void draw() {
     intro();
   } else if (mode == GAME) {
     game();
+
   } else if (mode == GAMEOVER) {
     gameover();
   } else if (mode == PAUSE) {  
@@ -44,3 +67,13 @@ void draw() {
     println("?");
   }
 }
+
+//{
+//    while (y < 300) {
+//      x = x + 40;
+//      if (x > width) {
+//        x = 0;
+//        y = y + 15;
+//        
+//      }
+//    }

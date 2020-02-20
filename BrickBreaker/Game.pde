@@ -1,5 +1,14 @@
 void game() {
   background(255);
+  
+  int i = 0;
+  while (i < 50) {
+   Brick b = myBricks.get(i);
+   b.act();
+   b.show();
+   i++;
+  }
+  
   ball();
   paddle();
 }
@@ -20,6 +29,10 @@ void ball() {
   if (by < 0 || by > height) { //height = 600
 
     bvy = -bvy;
+  }
+  if (dist(px, py, bx, by) < 60) {
+   bvx = (bx - px)/10;
+   bvy = (by - py)/10;
   }
 }
 
