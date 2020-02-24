@@ -2,7 +2,7 @@ void game() {
   background(255);
   
   int i = 0;
-  while (i < 50) {
+  while (i < 48) {
    Brick b = myBricks.get(i);
    b.act();
    b.show();

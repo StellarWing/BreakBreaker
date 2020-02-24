@@ -4,7 +4,7 @@ final int INTRO = 1;
 final int GAME  = 2;
 final int GAMEOVER = 3;
 final int PAUSE = 4;
-int mode = GAME;  //1: intro screen, 2: game playing, 3: gameover screen, 4: pause
+int mode = INTRO;  //1: intro screen, 2: game playing, 3: gameover screen, 4: pause
 
 //ball variable
 float bx, by, bvx, bvy; //ball variables, ballx = bx
@@ -28,12 +28,12 @@ void setup() {
   gridx = 0;
   gridy = 0;
   int i = 0;
-  while(i < 50) {
+  while(i < 48) {
    myBricks.add(new Brick() ); //calling constructor
-   gridx = gridx + 40;
+   gridx = gridx + 70;
    if (gridx >= 800) {
      gridx = 0;
-     gridy = gridy + 20;
+     gridy = gridy + 40;
      
    }
     i++;
