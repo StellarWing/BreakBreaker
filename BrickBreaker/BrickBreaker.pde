@@ -17,6 +17,7 @@ boolean leftKey, rightKey;
 
 int gridx;
 int gridy;
+int score, lives, highscore;
 
 
 
