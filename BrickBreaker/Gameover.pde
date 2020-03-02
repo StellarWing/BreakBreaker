@@ -5,3 +5,9 @@ void gameover() {
 void gameOverClicks() {
   
 }
+
+void highscore() {
+  if (score > highscore) {
+    highscore = score;
+  }
+}

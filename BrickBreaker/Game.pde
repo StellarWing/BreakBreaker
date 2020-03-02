@@ -11,6 +11,12 @@ void game() {
   
   ball();
   paddle();
+  
+  textSize(40);
+  text("Score: " + score, 100, 100);
+  text("Lives: " + lives, 100, 300);
+  
+  
 }
 
 void gameClicks() {
@@ -33,6 +39,10 @@ void ball() {
   if (dist(px, py, bx, by) < 60) {
    bvx = (bx - px)/10;
    bvy = (by - py)/10;
+  }
+  if (dist(bx, by, x, y) < 35) {
+   score = score + 1;
+   
   }
 }
 

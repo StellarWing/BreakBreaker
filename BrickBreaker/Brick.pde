@@ -1,5 +1,6 @@
+float x, y;
 class Brick {
-  float x, y;
+
   color b;
   color g;
   color r;
